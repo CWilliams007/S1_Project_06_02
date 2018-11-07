@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 2
+   
+   Save your Fork Graphic Design Styles
+   Author: Chad Williams
+   Date:   11.7.18
+
+   Filename: sf_effects.css
+
+*/
+
+/* Body Header Styles */
+/* Step 3, adds box shadows to left and right of body element with offsets of 10pixels and a blur of 50pixels. */
+body {
+    box-shadow: 10px 0px 50px rgb(51, 51, 51), -10px 0px 50px rgb(51, 51, 51);
+}
+
+/* Navigation Tabs List Styles */
+/* Step 5, creates a trapezoidal effect on the top links for the nav */
+body>header nav.tabs li {
+    transform: perspective(50px) rotateX(20deg);
+}
+
+body>header nav.tabs {
+    background-image: url("sf_back1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Step 6, toplinks when hovered change color. */
+body>header nav.tabs li:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+
+
+
+/* Left Section Styles */
+/* Step 7, left nav bar now has border and rounded corners  */
+section#left nav.vertical {
+    border: 1px solid rgb(20, 167, 170);
+    border-radius: 25px;
+}
+
+/* Step 8, affects h1 in left nav bar, rounding their topright&topleft corners. */
+section#left nav.vertical h1 {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+/* Center Article Styles */
+/* Step 9, adds a gradient circle behind the center article, a border with rounded corners and a box shadow. */
+section#center article {
+    background: radial-gradient(circle, white 30%, rgb(151, 151, 151));
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 50px;
+    box-shadow: rgb(51, 51, 51) 10px 10px 20px;
+}
+
+
+
+/* Blockquote Styles */
+/* Step 10, adds a background image of a speechbubble to each blockquote and a dropshadow. */
+blockquote {
+    background-image: url("sf_speech.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+}
+
+/* Step 11, sets reviewers pictures to circles instead of squares. */
+cite img {
+    border-radius: 50%;
+}
